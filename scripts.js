@@ -1,13 +1,32 @@
-fetch('https://api.datausa.io/tesseract/data.jsonrecords?cube=acs_yg_total_population_5&measures=Population&drilldowns=Year')
-    .then((response) => {
-        return response.json();
-    })
-    .then((users) => console.log(users));
-
-async function logData() {
+async function getPopulationData() {
     const response = await fetch("https://api.datausa.io/tesseract/data.jsonrecords?cube=acs_yg_total_population_5&measures=Population&drilldowns=Year")
     const data = await response.json();
     console.log(data.data);
+
+    let arrPopData = data.data;
+
+    arrPopData.sort((a, b) => Number(a.Year) - Number(b.Year));
+
+    const table = document.querySelector('tbody');
+    arrPopData.forEach(dataPoint => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${dataPoint.Year}</td>
+            <td>${dataPoint.Population.toLocaleString()}</td>
+        `;
+
+        table.append(row);
+
+    });
 }
 
-getUsers().then((data) => console.log(data));
+getPopulationData().then((data) => console.log(data));
+
+// function createTable() {
+//     const table = document.querySelector('pop-data-table tbody');
+//     arrPopData.forEach(dataPoint => {
+//         const row = document.createElement("tr");
+
+//     })
+// }
