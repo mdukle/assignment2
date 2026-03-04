@@ -21,12 +21,7 @@ async function getPopulationData() {
     });
 }
 
-getPopulationData().then((data) => console.log(data));
+(() => {
+    getPopulationData()
+})();
 
-// function createTable() {
-//     const table = document.querySelector('pop-data-table tbody');
-//     arrPopData.forEach(dataPoint => {
-//         const row = document.createElement("tr");
-
-//     })
-// }
