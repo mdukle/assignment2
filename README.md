@@ -4,7 +4,7 @@ This assignment was done to further my understanding of API, JSON, HTML, and Jav
 ## Prerequisites and Usage
 No packages need to be installed to run this program. The file can be viewed by opening index.html in a browser, which will load the data.
 
-Data was pull from an API from DataUSA which can be found here: [DataUSA Link](https://api.datausa.io/tesseract/data.jsonrecords?cube=acs_yg_total_population_5&measures=Population&drilldowns=Year")
+Data was pull from an API from DataUSA which can be found here: [DataUSA Link](https://api.datausa.io/tesseract/data.jsonrecords?cube=acs_yg_total_population_5&measures=Population&drilldowns=Year)
 
 ## Web Page That Displays US Population Data
 
