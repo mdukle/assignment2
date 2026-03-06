@@ -12,7 +12,7 @@ This project works by displaying data pulled from an API on an html frontend pag
 
 In the JS file (scripts.js), I used a fetch function to obtain data from the API. I saved it as a constant and logged it to ensure the correct data was being accessed and saved appropriately. I then saved just the data row of all the information provided as an array. The data was then sorted with the built in .sort method and the years were subtracted from each other to sort them in ascending order (if a - b yields a negative number, it will put a before b). A table was then created that took each item in the array and added it to a row via innerHTML using Year and Population. The toLocaleString() added the commas to the numbers. The rows were then appended to the table. I also used an Immediately Invoked Function Expression (IIFE) so that the function would run as soon as it's defined. 
 
-In the CSS file, I have minimal styling to organize the data in a presentable fashion. I specified certain characteristics for the table and additional ones for the data cell.
+In the CSS file, I have added styling to organize the data in a presentable fashion. I specified certain characteristics for the table and additional ones for the data cell.
 
 #### Code snippet:
 
